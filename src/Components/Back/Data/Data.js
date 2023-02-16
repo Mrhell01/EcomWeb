@@ -4,7 +4,7 @@ const data = {
          
     {   
         id: "1",
-        image:"../Images/AirJordan.jpg",
+        image:"./Images/aj.jpeg",
         name: "Nike Air Jordan",
         price: 9999,
     },
@@ -14,7 +14,7 @@ const data = {
         id: "2",
         name: "Nike Air Force 1",
         price: 8000,
-        image:"./Images/airforce1.jpg",
+        image:"./Images/af.jpeg",
     },
         
      

@@ -1,17 +1,20 @@
 import React from "react";
 import "./Products.css";
-const Products = ({ productItems }) => {
+import ProductFilter from "./ProductFilter";
+
+const Products = ({ productItems, handleAddProduct }) => {
   return (
+
     <div className="products">
       {productItems.map((productItems) => (
-        <div>
-          <img
-            className="product-image"
-            src={productItems.Images}
-            alt={productItems.name}
-              />
+        <div className="card">
+              <img
+                className="product-image"
+                src={productItems.image}
+                alt={productItems.name}
+                  />
               <div>
-                  <h3 className="product.name">
+                  <h3 className="product-name">
                       {productItems.name}
                   </h3>
               </div>
@@ -19,9 +22,14 @@ const Products = ({ productItems }) => {
               <div className="product-price">
                   ₹{productItems.price}
               </div>
+          
               <div>
-                  <button className="product-add-button">Add to Cart</button>
-              </div>
+            <button
+              className="product-add-button"
+              onClick= {()=> handleAddProduct (productItems)}>
+              Add to Cart
+             </button>
+             </div>
         </div>
       ))}
     </div>

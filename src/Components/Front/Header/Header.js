@@ -1,28 +1,36 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import "./Header.css"
+import ProductFilter from '../Products/ProductFilter';
 
 const Header = () => {
   return (
       <header className='header'>
           <div>
               <h1>
-                    <Link to = "/" className="logo"> MyWebsite</Link>
+                    <a href="/" className='logo'>DashBoard</a>
               </h1>
           </div>
           <div className='Header-links'>
           <ul>
                   <li>
-                  <Link to = "/"> Home </Link>
+                  <a href="/">Home</a>
                   </li>
               </ul>
               <ul>
                   <li>
-                      <Link to="/"> Cart </Link>
+                      <a href="/Cart">Cart</a>
                       <i></i>
                   </li>
-            </ul>
-          </div>
+        </ul>
+        <ul>
+          <li>
+          <ProductFilter className="filter"></ProductFilter>
+          </li>
+        </ul>
+      
+      </div>
+      
         </header>
   );
 }

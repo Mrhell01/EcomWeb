@@ -1,7 +1,7 @@
 .header{
     position: sticky;
     top: 0;
-    min-height: 80px;
+    min-height: 60px;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -16,10 +16,12 @@
     text-transform: uppercase;
     color: white;
     padding-left: 40px;
+    align-items: center;
 }
 
 .Header-links{
     display: flex;
+    align-items: center;
 }
 
 .Header-links ul li {
@@ -37,4 +39,11 @@
 }
 .Header-links ul li a:hover{
     color: yellow;
+}
+
+.filter{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    padding: 0px 15px;
 }

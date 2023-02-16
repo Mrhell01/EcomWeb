@@ -27,3 +27,69 @@ const Products = (productItems) => {
 };
 
 export default Products
+cartItems = { cartItems } handleAddProduct = { handleAddProduct }
+
+
+{cartItems.length === 0 && (
+    <div className="cart-items-empty">No Items Are Added</div>
+  )}
+
+  <div>
+    {cartItems.map((item) => (
+      <div key={item.id} className="cart-items-list">
+        <img
+          className="cart-item-image"
+          src={item.image}
+          alt={item.name} />
+      </div>
+    ))}
+  </div>
+
+
+
+
+
+//mchange
+import React from "react";
+import "./Products.css";
+
+const Products = (props) => {
+  const handleAddProduct = (productItems) => {
+    props.handleAddProduct(productItems);
+  }
+  return (
+    < div className = "products" >
+    {
+      props.productItems.map((productItems) => (
+        <div className="card">
+          <img
+            className="product-image"
+            src={productItems.image}
+            alt={productItems.name}
+          />
+          <div>
+            <h3 className="product-name">
+              {productItems.name}
+            </h3>
+          </div>
+
+          <div className="product-price">
+            ₹{productItems.price}
+          </div>
+          
+          <div>
+            <button
+              className="product-add-button"
+              onClick={() => handleAddProduct(props.productItems)}
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      ))
+    }
+    </div>
+  );
+};
+
+export default Products;
