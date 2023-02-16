@@ -19,8 +19,9 @@ const Header = () => {
               </ul>
               <ul>
                   <li>
-                      <a href="/Cart">Cart</a>
-                      <i></i>
+                      <a href="/Cart">
+              <i class="fa fa-cart-shopping"></i>
+              </a>
                   </li>
         </ul>
         <ul>

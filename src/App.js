@@ -48,7 +48,7 @@ import { BrowserRouter as Router } from "react-router-dom";
   return (
     <div >
       <Router>
-        <Header></Header>
+        <Header />
         <Routes
           productItems={productItems}
           cartItems={cartItems}

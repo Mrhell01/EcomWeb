@@ -1,10 +1,10 @@
 import React from "react";
 import "./Products.css";
-import ProductFilter from "./ProductFilter";
+// import ProductFilter from "./ProductFilter";
 
 const Products = ({ productItems, handleAddProduct }) => {
   return (
-
+        
     <div className="products">
       {productItems.map((productItems) => (
         <div className="card">
