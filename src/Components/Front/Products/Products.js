@@ -1,5 +1,6 @@
 import React from "react";
 import "./Products.css";
+// import Button from "./Button";
 // import ProductFilter from "./ProductFilter";
 
 const Products = ({ productItems, handleAddProduct }) => {
@@ -23,14 +24,18 @@ const Products = ({ productItems, handleAddProduct }) => {
                   ₹{productItems.price}
               </div>
           
-              <div>
+          <div>
+          <div> 
+            
             <button
               className="product-add-button"
-              // onClick={handleAddProduct(productItems)}
+              // onClick={ () => handleAddProduct(productItems)}
             >
               Add to Cart
             </button>
+            </div>
             
+           
             
             
             

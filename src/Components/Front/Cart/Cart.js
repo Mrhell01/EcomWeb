@@ -1,6 +1,5 @@
 // import React from "react";
 // import "./Cart.css";
-
 // const Cart = ({
 //   cartItems,
 //   handleAddProduct,
@@ -63,8 +62,8 @@
 // export default Cart;
 
 import React from 'react'
-
-const Cart = ({cartItems}) => {
+ 
+const Cart = ({cartItems, handleAddProduct, item , handleRemoveProduct}) => {
   return (<div className="cart-items">
     <h2 className="cart-items-header">Cart items</h2>
   
@@ -80,9 +79,25 @@ const Cart = ({cartItems}) => {
               alt={item.name} />
             
           </div>
+
         ))}
       </div>
-  
+          
+      <div className="cart-items-names">{item.name}</div>
+             <div className="cart-items-function">
+               <button
+                className="cart-items-add"
+                onClick={() => handleAddProduct(item)}
+              >
+                +
+              </button>
+              <button
+                className="cart-items-remove"
+                onClick={() => handleRemoveProduct(item)}
+              >
+                -
+              </button>
+            </div>
   
   
   </div>

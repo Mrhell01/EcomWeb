@@ -7,7 +7,7 @@ function Button() {
   }
   return (
     <form onSubmit={handleAddProduct}>
-        <button className="product-add-button" type="button" >Add to Cart </button>
+        <button className="product-add-button" type="button" > to Cart </button>
       </form>
     );
   
