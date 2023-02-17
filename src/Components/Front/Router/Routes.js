@@ -1,6 +1,6 @@
 import React from 'react';
 import Products from '../Products/Products';
-// import Cart from '../Cart/Cart';
+import Cart from '../Cart/Cart';
 import { Route , Switch } from "react-router-dom";
 // import ProductFilter from '../Products/ProductFilter';
 
@@ -13,9 +13,16 @@ const Routes = ({
 }) => {
   return (
     <div>    
+      
       <Switch>
-        <Route exact path='/' />
-        <Products productItems={productItems} />
+        <Route exact path='/'>
+        <Products productItems={productItems} handleAddProduct={handleAddProduct} />
+        </Route>
+        <Route exact path='/cart'>
+        <Cart cartItems={cartItems} handleAddProduct={handleAddProduct} ></Cart>
+        </Route>
+        
+        
       </Switch>
     </div>
   )
@@ -32,7 +39,7 @@ export default Routes;
 //         </Route>
         
 //         <Route exact path="/Cart" component={Cart}  >
-//           <Cart cartItems={cartItems}
+// //           <Cart cartItems={cartItems}
 //             handleAddProduct={handleAddProduct}
 //             handleRemoveProduct={handleRemoveProduct}
 //             handleCartClearance={handleCartClearance}
