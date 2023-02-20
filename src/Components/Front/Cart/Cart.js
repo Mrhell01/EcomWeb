@@ -1,16 +1,41 @@
 import React from "react";
 import "./Cart.css";
 
+
 const Cart = ({
   cartItems,
   handleAddProduct,
   handleRemoveProduct,
   handleCartClearance,
   }) => {
+
   const totalPrice = cartItems.reduce(
     (price, item) => price + item.quantity * item.price,
-    0
+    1
+
   );
+  
+
+
+  cartItems =[
+    {
+        "id": "2",
+        "name": "Nike Air Force 1",
+        "price": 8000,
+        "image": "./Images/af.jpeg",
+        "type": "Shoes",
+        "quantity": 2
+    },
+    
+    {
+        "id": "1",
+        "image": "./Images/aj.jpeg",
+        "name": "Nike Air Jordan",
+        "price": 9999,
+        "type": "Shoes",
+        "quantity": 1
+    }
+];
 
   return (
     <div className="cart-items">

@@ -11,7 +11,7 @@ import { BrowserRouter as Router } from "react-router-dom";
     const { productItems } = data;
     const [cartItems, setCartItems] = useState([]);
 
-    const { handleAddProduct } = (product) => {
+    const handleAddProduct = (product) => {
       const ProductExist = cartItems.find((item) => item.id === product.id);
       if (ProductExist) {
         setCartItems(
@@ -20,7 +20,9 @@ import { BrowserRouter as Router } from "react-router-dom";
               ? { ...ProductExist, quantity: ProductExist.quantity + 1 }
               : item
           )
+          
         );
+        console.log(cartItems);
       } else {
         setCartItems([...cartItems, { ...product, quantity: 1 }]);
       }
